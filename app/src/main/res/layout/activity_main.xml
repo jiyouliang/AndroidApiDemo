@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.androidapidemo.view.MyConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingTop="48dp"
+    tools:context=".view.ViewMeasureLayoutDrawActivity">
+
+    <com.android.androidapidemo.view.MyFrameLayout
+        android:id="@+id/layout_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.android.androidapidemo.view.MyRelativeLayout
+            android:id="@+id/layout_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#A68E8E"
+            android:gravity="center">
+
+            <com.android.androidapidemo.view.MyTextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="This is TextView"
+                android:textSize="28sp" />
+
+            <com.android.androidapidemo.view.MyButton
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="setTextViewColor"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <com.android.androidapidemo.view.MyButton
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="RelativeLayout.invalidate()"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <com.android.androidapidemo.view.MyButton
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="TextView.requestLayout()"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <com.android.androidapidemo.view.MyButton
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="RelativeLayout.requestLayout()"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </com.android.androidapidemo.view.MyRelativeLayout>
+
+    </com.android.androidapidemo.view.MyFrameLayout>
+
+    <com.android.androidapidemo.view.MyLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#AF6767"
+        android:gravity="center"
+        android:padding="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_frame">
+
+        <com.android.androidapidemo.view.MyImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_launcher_background" />
+
+    </com.android.androidapidemo.view.MyLinearLayout>
+
+</com.android.androidapidemo.view.MyConstraintLayout>
